@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valorant-Style Tactical Arena</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="hud">
+      <div>
+        <h1>Tactical Arena</h1>
+        <p class="subtitle">A fast, ability-driven 5v5 prototype inspired by tactical hero shooters.</p>
+      </div>
+      <div class="controls">
+        <h2>Controls</h2>
+        <ul>
+          <li><strong>WASD</strong> to move</li>
+          <li><strong>Mouse</strong> to aim</li>
+          <li><strong>Left Click</strong> to shoot</li>
+          <li><strong>Shift</strong> to dash (cooldown)</li>
+          <li><strong>Q/E</strong> to deploy abilities</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="arena">
+      <canvas id="game" width="960" height="540" aria-label="Tactical arena game"></canvas>
+      <div class="overlay" id="overlay">
+        <h2>Round Start</h2>
+        <p>Eliminate the bots before the spike detonates.</p>
+        <button id="startBtn">Start Round</button>
+      </div>
+    </div>
+
+    <div class="status-bar">
+      <div class="status">
+        <span>Health</span>
+        <div class="bar"><div id="healthFill"></div></div>
+      </div>
+      <div class="status">
+        <span>Dash</span>
+        <div class="bar"><div id="dashFill"></div></div>
+      </div>
+      <div class="status">
+        <span>Spike Timer</span>
+        <div class="bar"><div id="spikeFill"></div></div>
+      </div>
+      <div class="status">
+        <span>Score</span>
+        <strong id="score">0</strong>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
